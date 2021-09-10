@@ -80,6 +80,10 @@ a:visited {
 .modal-body {
     font-size: 24px;
 }
+.modal-hint {
+    color: green;
+    font-weight: bold;
+}
 /*********Прелоадер страницы********/
 #body__loader {
     width: 100%;
