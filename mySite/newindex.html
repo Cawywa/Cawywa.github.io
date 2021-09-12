@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Эта страница обо мне">
+    <meta name="author" content="Alexandr Flip">
+    <meta name="robots" content="all">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/newstyle.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Александр Флип - Веб-разработчик</title>
+</head>
+<body>
+    <div id="body__loader">
+        <div class="loader">
+          <span></span>
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+    </div>
+    
+    <button type="button" class="call-modal d-none" data-bs-toggle="modal" data-bs-target="#exampleModal"></button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Получи <span class="text-uppercase">скидку</span> на создание сайта!</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text">
+        Закажи у меня сайт прямо сейчас и получи скидку в 20%. Согласен? Тогда давай поскорее определимся с типом твоего будущего сайта.
+      </div>
+      <div class="modal-footer">
+        <button type="button" href="#cost" class="btn btn-warning text-uppercase" data-bs-dismiss="modal" onclick="scrollToCost()">Выбрать сайт</button>
+      </div>
+    </div>
+  </div>
+</div>
+  
+    <div class="modal fade" id="sendModal" tabindex="-1" aria-labelledby="sendModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content p-5">
+      <form class="modal__form" action="php/mail.php" method="post">
+        <div class="mb-3">
+            <label for="inputEmail" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="user_email" id="inputEmail" value="">
+          </div>
+          <div class="mb-3">
+            <label for="inputPhone" class="form-label">Phone number</label>
+            <input type="phone" class="form-control" name="user_phone" id="inputPhone" value="">
+          </div>
+        <button type="submit" class="btn btn-primary mb-5">Submit</button>
+    </form>
+      <p class="hint"></p>
+      <p class="letter-send"></p>
+    </div>
+  </div>
+</div>
+   
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="header__row row">
+                    <div class="logo col-6 col-sm-5 col-lg-3 col-xxl-2">Александр Флип</div>
+                    <nav class="header__menu d-none d-lg-flex col-lg-8 offset-lg-1 col-xl-7 offset-xl-2 col-xxl-6 offset-xxl-4 row">
+                        <div class="menu__item col-2"><a href="#about">Обо мне</a></div>
+                        <div class="menu__item col-2"><a href="#skills">Услуги</a></div>
+                        <div class="menu__item col-2"><a href="#cases">Кейсы</a></div>
+                        <div class="menu__item col-2"><a href="#cost">Прайс</a></div>
+                        <div class="menu__item col-2"><a href="#reviews">Отзывы</a></div>
+                        <div class="menu__item col-2"><a href="#contacts">Контакты</a></div>
+                    </nav>
+                     <nav class="dropdown d-block col-5 offset-1 col-sm-2 offset-sm-2 offset-sm-4 col-md-2 offset-md-5 d-lg-none">
+                      <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">Навигация</button>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#about">Обо мне</a></li>
+                        <li><a class="dropdown-item" href="#skills">Услуги</a></li>
+                        <li><a class="dropdown-item" href="#cases">Кейсы</a></li>
+                        <li><a class="dropdown-item" href="#cost">Прайс</a></li>
+                        <li><a class="dropdown-item" href="#reviews">Отзывы</a></li>
+                        <li><a class="dropdown-item" href="#contacts">Контакты</a></li>
+                      </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+        <main class="main">
+            <section class="main-screen">
+                <div class="container">
+                    <div class="row">
+                       <div class="main-screen__content animate__animated animate__backInLeft animate__delay-2s col col-md-9 col-lg-8 col-xl-7 col-xxl-6">
+                           <h1 class="main-screen__title">Привет<br>Я Александр Флип</h1>
+                            <h4 class="main-screen__subtitle">Фулл стек веб-разработчик</h4>
+                            <a href="#" class="main-screen__button button">Обо мне</a>
+                            <a href="#" class="main-screen__button button">Мои работы</a>
+                       </div>
+                    </div>
+                </div>
+            </section>
+            <section class="about section" id="about">
+                <div class="container">
+                    <h2 class="about__title title-h2 line">Обо мне</h2>
+                    <div class="about__body">
+                        <div class="about__photo"><img src="img/about/about__photo-bad.jpg" alt="Моя фотография"></div>
+                        <div class="about__text text">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed dapibus leo nec ornare diam. Sed commodo nibh ante facilisis bibendum dolor feugiat at. Duis sed dapibus leo nec ornare diam commodo.</p>
+                        </div>
+                           <div class="about__button">
+                               <div class="about__button-save button"><a href="files/Resume.docx" download target="_blank">Скачать резюме</a></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="skills section" id="skills">
+                <div class="container">
+                    <h2 class="skills__title title-h2 line">Что я умею</h2>
+                    <div class="skills__row">
+                        <div class="skills__column">
+                            <div class="skills-item">
+                                <div class="skills-item__icon"><img src="img/icon/skills1.png" alt="Иконка">
+                                </div>
+                                <div class="skills-item__title bahn-font">Веб-дизайн</div>
+                                <div class="skills-item__text text">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam. </div>
+                            </div>
+                        </div>
+                        <div class="skills__column">
+                            <div class="skills-item">
+                                <div class="skills-item__icon"><img src="img/icon/skills2.png" alt="Иконка">
+                                </div>
+                                <div class="skills-item__title bahn-font">Разработка</div>
+                                <div class="skills-item__text text">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque.</div>
+                            </div>
+                        </div>
+                        <div class="skills__column">
+                            <div class="skills-item">
+                                <div class="skills-item__icon"><img src="img/icon/skills3.png" alt="Иконка">
+                                </div>
+                                <div class="skills-item__title bahn-font">СЕО-Оптимизация</div>
+                                <div class="skills-item__text text">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque etiam.</div>
+                            </div>
+                        </div>
+                        <div class="skills__column">
+                            <div class="skills-item">
+                                <div class="skills-item__icon"><img src="img/icon/skills4.png" alt="Иконка">
+                                </div>
+                                <div class="skills-item__title bahn-font">Маркетинг</div>
+                                <div class="skills-item__text text">Lorem ipsum dolor sit amet placerat facilisis felis mi in tempus eleifend pellentesque natoque .</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cases section" id="cases">
+                <div class="cases__header">
+                    <div class="container">
+                        <div class="row">
+                            <h2 class="cases__title title-h2 line col-12">Кейсы</h2>
+                            <div class="cases__subtitle text col-10 offset-1 col-xl-8 offset-xl-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sed Dapibus leo nec ornare diamcoccodo nibh ante facilisis.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cases__body">
+                    <div class="container">
+                        <div class="row">
+                            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                              <div class="carousel-inner">
+                               
+                                <div class="carousel-item active">
+                                    <img src="img/cases/case_1.jpg" class="d-block w-100 image-link" href="img/cases/case_1.jpg" alt="Мой кейс">
+                                    <div class="cases__content row">
+                                      <div class="cases__case-info col-md-3 col-lg-2">
+                                        <div class="case-info">  
+                                            <div class="cases__case-client info-header">Client:</div>
+                                            <p class="cases__case-company text">"MoversLocation"</p>
+                                            <div class="cases__case-website info-header">Website:</div>
+                                            <p class="cases__case-adress"><a href="http://moverslocation.com" class="text">http://moverslocation.com</a></p>
+                                        </div>
+                                        <a href="http://moverslocation.com" class="cases__case-button" target="_blank">Перейти на сайт</a>
+                                    </div>
+                                      <div class="cases__case-about col-md-8 offset-md-1 col-lg-9">
+                                        <div class="cases__case-name info-header">Movers Location</div>
+                                        <div class="cases__case-description text">Безусловно, высокое качество позиционных исследований предопределяет высокую востребованность кластеризации усилий. Современные технологии достигли такого уровня, что повышение уровня гражданского сознания обеспечивает широкому кругу (специалистов) участие в формировании анализа существующих паттернов поведения.</div>
+                                    </div>  
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="carousel-item">
+                                  <img src="img/cases/case_2.jpg" class="d-block w-100 image-link" href="img/cases/case_2.jpg" alt="Мой кейс">
+                                  <div class="cases__content row">
+                                      <div class="cases__case-info col-md-3 col-lg-2">
+                                        <div class="case-info">  
+                                            <div class="cases__case-client info-header">Client:</div>
+                                            <p class="cases__case-company text">"Hard WorkOut"</p>
+                                            <div class="cases__case-website info-header">Website:</div>
+                                            <p class="cases__case-adress"><a href="http://moverslocation.com" class="text">http://hardworkout.ru</a></p>
+                                        </div>
+                                        <a href="http://hardworkout.ru" class="cases__case-button" target="_blank">Перейти на сайт</a>
+                                    </div>
+                                      <div class="cases__case-about col-md-8 offset-md-1 col-lg-9">
+                                        <div class="cases__case-name info-header">Hard WorkOut Shop</div>
+                                        <div class="cases__case-description text">Прежде всего, сложившаяся структура организации создаёт необходимость включения в производственный план целого ряда внеочередных мероприятий с учётом комплекса распределения внутренних резервов и ресурсов.</div>
+                                    </div>  
+                                    </div>
+                                  </div>
+                                  
+                                  <div class="carousel-item">
+                                  <img src="img/cases/case_3.jpg" class="d-block w-100 image-link" href="img/cases/case_3.jpg" alt="Мой кейс">
+                                  <div class="cases__content row">
+                                      <div class="cases__case-info col-md-3 col-lg-2">
+                                        <div class="case-info">  
+                                            <div class="cases__case-client info-header">Client:</div>
+                                            <p class="cases__case-company text">"Business boosted"</p>
+                                            <div class="cases__case-website info-header">Website:</div>
+                                            <p class="cases__case-adress"><a href="http://businessboosted.ru" class="text">http://businessboosted.ru</a></p>
+                                        </div>
+                                        <a href="http://businessboosted.ru" class="cases__case-button" target="_blank">Перейти на сайт</a>
+                                    </div>
+                                      <div class="cases__case-about col-md-8 offset-md-1 col-lg-9">
+                                        <div class="cases__case-name info-header">Business Boosted</div>
+                                        <div class="cases__case-description text">Приятно, граждане, наблюдать, как предприниматели в сети интернет неоднозначны и будут смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.</div>
+                                    </div>  
+                                    </div>
+                                  </div>
+           
+                              </div>
+                              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Предыдущий</span>
+                              </button>
+                              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"  data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Следующий</span>
+                              </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="cost section" id="cost">
+                <div class="container">
+                    <div class="row">
+                        <div class="cost__form col col-md-10 offset-md-1">
+                            <h2 class="cost__title">Расчет стоимости</h2>
+                               <div class="cost__form_body">
+                                <div class="cost__category">
+                                    <h3 class="cost__category_header">Тип сайта</h3>
+                                    <select class="cost__select" name="site-type" onchange="calculateCost()">
+                                        <option value="0">Выберите пункт...</option>
+                                        <option value="1" >Лендинг</option>
+                                        <option value="2">Визитка</option>
+                                        <option value="3">Корпоративный</option>
+                                        <option value="4">Интернет-магазин</option>
+                                        <option value="5">Блог</option>
+                                    </select>
+                                </div>
+                                <div class="cost__category">
+                                    <h3 class="cost__category_header">Дизайн</h3>
+                                    <select class="cost__select" name="site-design" onchange="calculateCost()">
+                                        <option value="0">Выберите пункт...</option>
+                                        <option value="1">Классический</option>
+                                        <option value="2">Минимализм</option>
+                                        <option value="3">Модернизм</option>
+                                        <option value="4">Ретро</option>
+                                        <option value="5">HI TECH</option>
+                                    </select>
+                                </div>
+                                <div class="cost__category">
+                                    <h3 class="cost__category_header">Адаптивность</h3>
+                                    <select class="cost__select" name="site-adapt" onchange="calculateCost()">
+                                        <option value="0">Выберите пункт...</option>
+                                        <option value="1">Резиновый</option>
+                                        <option value="2">Адаптивный</option>
+                                        <option value="3">Отзывчивый</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="cost__form_footer">
+                                <div class="cost__param row">
+                                    <div class="cost__deadlines col-9">Сроки (дней)</div>
+                                    <div class="cost__days col-3">0</div>
+                                </div>
+                                <div class="cost__param row">
+                                    <div class="cost__price col-9">Стоимость (руб.)</div>
+                                    <div class="cost__value col-3">0</div>
+                                </div>
+                                <div class="cost__button button col col-md-6 offset-md-3 col-lg-4 offset-lg-4 col-xxl-2 offset-xxl-5"><a href="#" data-bs-toggle="modal" data-bs-target="#sendModal">Оставить заявку</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="stats">
+                <div class="container">
+                    <h2 class="stats__title title-h2 line">Немного статистики</h2>
+                    <div class="stats__row">
+                        <div class="stats__column">
+                            <div class="stats-item">
+                                <div class="stats-item__icon"><img src="img/icon/stats1.png" alt="Иконка"></div>
+                                <div class="stats-item__title">0</div>
+                                <div class="stats-item__subtitle">Счастливых клиентов</div>
+                            </div>
+                        </div>
+                        <div class="stats__column">
+                            <div class="stats-item">
+                                <div class="stats-item__icon"><img src="img/icon/stats2.png" alt="Иконка"></div>
+                                <div class="stats-item__title">0</div>
+                                <div class="stats-item__subtitle">Часов работы</div>
+                            </div>
+                        </div>
+                        <div class="stats__column">
+                            <div class="stats-item">
+                                <div class="stats-item__icon"><img src="img/icon/stats3.png" alt="Иконка"></div>
+                                <div class="stats-item__title">0</div>
+                                <div class="stats-item__subtitle">Проектов завершено</div>
+                            </div>
+                        </div>
+                        <div class="stats__column">
+                            <div class="stats-item">
+                                <div class="stats-item__icon"><img src="img/icon/stats4.png" alt="Иконка"></div>
+                                <div class="stats-item__title">0</div>
+                                <div class="stats-item__subtitle">Наград получено</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="reviews section" id="reviews">
+                <div class="container">
+                    <h2 class="reviews__title title-h2 line">Отзывы</h2>
+                    <div class="slideshow-container">
+               
+                    <div class="my-slide fade-effect row">
+                        <div class="review__photo col-6 offset-3"><img src="img/reviews/1.png" alt="Автор отзыва"></div>
+                        <p class="review__text text col col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">Ответственно относится к срокам и к качеству. В целом количество правок было минимальным. Будем дальше сотрудничать.</p>
+                        <p class="review__info text col"><b>Игорь</b>, Ген директор компании "Wmstudio"</p>
+                    </div>
+                
+                    <div class="my-slide fade-effect row">
+                        <div class="review__photo col-6 offset-3"><img src="img/reviews/2.png" alt="Автор отзыва"></div>
+                        <p class="review__text text col col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">Александр - отличный исполнитель, без кучи воды и лишних вопросов просто все взял и сделал, правки и доработки внёс оперативно, буду обращаться и могу рекомендовать!</p>
+                        <p class="review__info text col"><b>Семён</b>, просто хороший парень</p>
+                    </div>
+                
+                    <div class="my-slide fade-effect row">
+                        <div class="review__photo col-6 offset-3"><img src="img/reviews/3.png" alt="Автор отзыва"></div>
+                        <p class="review__text text col col-sm-10 offset-sm-1 col-lg-8 offset-lg-2">Понравилось работать с исполнителем. Работа выполнена в срок, качественно и по адекватной цене. Буду обращаться еще.</p>
+                        <p class="review__info text col"><b>Алина</b>, мастер-бровист</p>
+                    </div>
+                
+                    <a class="preview_slide" onclick="changeSlide(-1)">&#10094;</a>
+                    <a class="next_slide" onclick="changeSlide(1)">&#10095;</a>
+                
+                    <div class="slide_controls">
+                        <div class="control-circle" onclick="currentSlide(1)"></div>
+                        <div class="control-circle" onclick="currentSlide(2)"></div>
+                        <div class="control-circle" onclick="currentSlide(3)"></div>
+                    </div>
+                  </div>
+                </div>
+            </section>
+            <section class="contacts section" id="contacts">
+                <div class="container">
+                    <div class="row">
+                        <h2 class="contacts__title title-h2 line">Мои контакты</h2>
+                        <div class="contacts__subtitle text col-10 offset-1 col-lg-8 offset-lg-2">Lorem ipsum dolor sit amet, consectetur adipiscing elit duis sed dapibus leo nec ornare diamcoccodo </div>
+                        <div class="contacts__row col-md-10 offset-md-1 col-lg-8 offset-lg-2 col-xl-6 offset-xl-3">
+                            <div class="contacts__column">
+                                <div class="contacts-item">
+                                    <div class="contacts-item__icon"><img src="img/icon/contacts1.png" alt="Иконка"></div>
+                                    <div class="contacts-item__text text">Новосибирск<br>Улица Блюхера 32/1</div>
+                                </div>
+                            </div>
+                            <div class="contacts__column">
+                                <div class="contacts-item">
+                                    <div class="contacts-item__icon"><img src="img/icon/contacts2.png" alt="Иконка"></div>
+                                    <div class="contacts-item__text text">sanek.uvarov.01@mail.ru</div>
+                                </div>
+                            </div>
+                            <div class="contacts__column">
+                                <div class="contacts-item">
+                                    <div class="contacts-item__icon"><img src="img/icon/contacts3.png" alt="Иконка"></div>
+                                    <div class="contacts-item__text text">+7 (952) 942 96 98</div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3 class="contacts__message title-h2"><label for="name-field">Оставьте мне сообщение</label></h3>
+                        <form action="#" class="contacts__form col-10 offset-1 col-md-8 offset-md-2 row">
+                            <div class="form__name col-6 ps-0">
+                                <input type="text" id="name-field" class="form__name-input form" placeholder="Имя">
+                            </div>
+                            <div class="form__email col-6 pe-0">
+                                <input type="email" class="form__email-input form col-6" placeholder="Email">
+                            </div>
+                            <div class="form__message col-12 p-0">
+                                <textarea name="" class="form__message-input form" id="" cols="30" rows="10" placeholder="Сообщение"></textarea>
+                            </div>
+                            <div class="form__button col-md-10 offset-md-1 p-0">
+                                <input class="form__button-input button" type="submit" value="Отправить">
+                            </div>
+                        </form>
+                        <div class="contacts__row2 col-10 offset-1 col-lg-6 offset-lg-3 col-xl-4 offset-xl-4 row">
+                            <div class="contacts__column2 col-2 p-1">
+                                <div class="contacts-item2">
+                                   <a href="#" class="contacts-item2__icon"><img src="img/icon/contacts2-1.png" alt="Иконка"></a>
+                                </div>
+                            </div>
+                            <div class="contacts__column2 col-2 p-1">
+                                <div class="contacts-item2">
+                                   <a href="#" class="contacts-item2__icon"><img src="img/icon/contacts2-2.png" alt="Иконка"></a>
+                                </div>
+                            </div>
+                            <div class="contacts__column2 col-2 p-1">
+                                <div class="contacts-item2">
+                                   <a href="#" class="contacts-item2__icon"><img src="img/icon/contacts2-3.png" alt="Иконка"></a>
+                                </div>
+                            </div>
+                            <div class="contacts__column2 col-2 p-1">
+                                <div class="contacts-item2">
+                                   <a href="#" class="contacts-item2__icon"><img src="img/icon/contacts2-4.png" alt="Иконка"></a>
+                                </div>
+                            </div>
+                            <div class="contacts__column2 col-2 p-1">
+                                <div class="contacts-item2">
+                                   <a href="#" class="contacts-item2__icon"><img src="img/icon/contacts2-5.png" alt="Иконка"></a>
+                                </div>
+                            </div>
+                            <div class="contacts__column2 col-2 p-1">
+                                <div class="contacts-item2">
+                                   <a href="#" class="contacts-item2__icon"><img src="img/icon/contacts2-6.png" alt="Иконка"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <div class="my-location-map section">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A3e6789a2c569c6a1bf67e1a52109af7f877684a8513977aa3cc0f8d75626b832&amp;width=100%25&amp;height=350&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
+        <footer class="footer">
+               <div class="container">
+                <div class="footer__row">
+                    <div class="footer__content">Copyright © 2021 Александр Флип. Design by Web</div>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script src="js/preloader.js"></script>
+    <script src="js/bootstrap.bundle.js"></script>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <scipt src="/js/maskedinput.min.js"></scipt>
+    <script src="js/myScript.js"></script>
+    <script src="js/site-cost.js"></script>
+    <script src="js/slider.js"></script>
+</body>
+</html>
