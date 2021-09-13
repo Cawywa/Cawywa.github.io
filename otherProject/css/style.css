@@ -1,0 +1,276 @@
+/*=============Шрифты=============*/
+@import url(https://allfont.ru/index.php/allfont.css?fonts=colonna-mt);
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
+html, body {
+    font-family: 'Exo 2', sans-serif;
+}
+
+h1 {
+   font-family: 'Colonna MT', Arial, sans-serif; 
+}
+h2 {
+    font-family: Ubuntu, sans-serif;
+}
+.menu__item, .button {
+    font-family: 'Fira Sans', sans-serif;
+}
+
+/*=============Общие параметры=============*/
+.button {
+    font-size: 24px;
+    text-align: center;
+    padding: 13px 40px;
+    color: #fff;
+    border-radius: 40px;
+}
+.btn-blue {background-color: #3B2BFA;}
+.btn-blue:hover {
+    background-color: #2517CD;
+    box-shadow: 1px 1px 10px #fff;
+}
+.btn-orange {
+    background-color: #FA9A2B;
+}
+.btn-orange:hover {
+    background-color: #D68527;
+    box-shadow: 1px 1px 10px #fff;
+}
+
+a:visited, a:hover {
+    color: #fff;
+}
+.title {
+    font-size: 70px;
+    color: #fff;
+    text-align: center;
+}
+.title::after {
+    content: "";
+    height: 7px;
+    width: 180px;
+    background-color: #FA9A2B;
+    display: block;
+    margin: 30px auto 0 auto;
+    
+}
+.ibg {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.ibg>img {display: none;}
+
+/*=============Обёртка=============*/
+.wrapper {
+    overflow: hidden;
+    min-height: 100vh;
+}
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+
+/*=============Шапка=============*/
+.header {
+    background: #000;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+.menu {
+    height: 60px;
+}
+.menu__item {
+    display: block;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    text-align: center;
+}
+.logo>img {
+    width: auto;
+    height: 48px;
+}
+.call>img {
+    margin-right: 10px;
+    width: 24px;
+    height: auto;
+}
+.call {
+    line-height: 25px;
+}
+/*=============Главный экран=============*/
+.main-screen {
+    flex: 1 0 100%;
+    position: relative;
+}
+
+.main-screen__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+.main-screen__container {
+    height: 100%;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: center;
+    align-items: center;
+}
+.main-screen__content {
+    padding-top: 60px;
+}
+.main-screen__title {
+    position: relative;
+    color: #fff;
+    font-size: 170px;
+    line-height: 60px;
+    text-align: center;
+    margin-bottom: 70px;
+}
+.main-screen__title::before {
+    content: "";
+    position: absolute;
+    left: 999px;
+    top: -37px;
+    height: 31px;
+    width: 31px;
+    background: url(../images/main-screen/overTitle.png) no-repeat;
+}
+.main-screen__subtitle {
+    color: rgba(255,255,255,0.9);
+    font-size: 40px;
+    text-align: center;
+    margin-bottom: 80px;
+}
+.main-screen__buttons {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: space-around;
+}
+.container {
+    outline: 3px solid red;
+}
+@media(max-width: 1399px) {
+    .main-screen__title {
+        font-size: 140px;
+        margin-bottom: 65px;
+    }
+    .main-screen__title::before {
+        left: 848px;
+        top: -26px;
+        height: 29px;
+        width: 29px;
+        background: url(../images/main-screen/overTitleXL.png) no-repeat;
+    }
+    .main-screen__subtitle {
+        font-size: 30px;
+        margin-bottom: 65px;
+    }
+}
+@media(max-width: 1199px) {
+    .main-screen__title {
+        font-size: 120px;
+        margin-bottom: 60px;
+    }
+    .main-screen__title::before {
+        left: 718px;
+        top: -19px;
+        height: 25px;
+        width: 26px;
+        background: url(../images/main-screen/overTitleLG.png) no-repeat;
+    }
+    .main-screen__subtitle {
+        font-size: 25px;
+        margin-bottom: 60px;
+    }
+    .main-screen__button {
+        font-size: 20px;
+    }
+}
+@media(max-width: 991px) {    /*Планшеты*/
+    .main-screen__title {
+        font-size: 90px;
+        margin-bottom: 40px;
+    }
+    .main-screen__title::before {
+        left: 540px;
+        top: -6px;
+        height: 20px;
+        width: 20px;
+        background: url(../images/main-screen/overTitleMD.png) no-repeat;
+    }
+    .main-screen__subtitle {
+        margin-bottom: 50px;
+    }
+}
+@media(max-width: 767px) {
+    .main-screen__title {
+        font-size: 70px;
+    }
+    .main-screen__title::before {
+        left: 410px;
+        top: 3px;
+        height: 13px;
+        width: 13px;
+        background: url(../images/main-screen/overTitleSM.png) no-repeat;
+    }
+    .main-screen__subtitle {
+        font-size: 20px;
+        margin-bottom: 80px;
+    }
+    .main-screen__buttons {
+        justify-content: center;
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    .main-screen__button {
+        width: 100%;
+    }
+    .main-screen__button.btn-blue {
+        margin-bottom: 30px;
+    }
+}
+@media(max-width: 575px) {
+    .main-screen__title {
+        font-size: 13vw;
+    }
+    .main-screen__title::before {
+        display: none;
+    }
+    .main-screen__subtitle {
+        font-size: 4.5vw;
+    }
+    .main-screen__button {
+        font-size: 18px;
+    }
+    
+}
+
