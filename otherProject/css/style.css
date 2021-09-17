@@ -1,4 +1,6 @@
+/*=================================*/
 /*=============Шрифты=============*/
+/*=================================*/
 @import url(https://allfont.ru/index.php/allfont.css?fonts=colonna-mt);
 @import url('https://fonts.googleapis.com/css2?family=Fira+Sans&display=swap');
 html, body {
@@ -8,14 +10,15 @@ html, body {
 h1 {
    font-family: 'Colonna MT', Arial, sans-serif; 
 }
-h2 {
-    font-family: Ubuntu, sans-serif;
-}
 .menu__item, .button {
     font-family: 'Fira Sans', sans-serif;
 }
-
+.text {
+    font-family: 'Ubuntu', sans-serif;
+}
+/*==========================================*/
 /*=============Общие параметры=============*/
+/*==========================================*/
 .button {
     font-size: 24px;
     text-align: center;
@@ -40,17 +43,17 @@ a:visited, a:hover {
     color: #fff;
 }
 .title {
-    font-size: 70px;
+    font-size: 56px;
     color: #fff;
     text-align: center;
 }
 .title::after {
     content: "";
-    height: 7px;
-    width: 180px;
+    height: 4px;
+    width: 110px;
     background-color: #FA9A2B;
     display: block;
-    margin: 30px auto 0 auto;
+    margin: 20px auto 0 auto;
     
 }
 .ibg {
@@ -61,7 +64,19 @@ a:visited, a:hover {
 }
 .ibg>img {display: none;}
 
+@media(max-width: 991px) {
+    .title {
+        font-size: 40px;
+    }
+}
+@media(max-width: 767px) {
+    .title {
+        font-size: 36px;
+    }
+}
+/*=================================*/
 /*=============Обёртка=============*/
+/*=================================*/
 .wrapper {
     overflow: hidden;
     min-height: 100vh;
@@ -83,37 +98,79 @@ a:visited, a:hover {
     -o-flex-direction: column;
     flex-direction: column;
 }
-
+/*================================*/
 /*=============Шапка=============*/
+/*==============================*/
 .header {
-    background: #000;
+    background: rgba(0,0,0,0.6);
     position: fixed;
     width: 100%;
     z-index: 10;
 }
-.menu {
+.menu, .menu-mobile {
     height: 60px;
 }
+.icon-logo {
+    height: 36px;
+    width: auto;
+}
+.icon-call {
+    height: 30px;
+    width: auto;
+    margin-right: 10px;
+}
+/*Мобильная версия*/
+.nav__burger {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+}
+.burger-element {
+    width: 50px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #fff;
+}
+.burger-element:nth-child(2) {
+    margin: 6px 0;
+}
+nav .dropdown {
+    text-align: right;
+}
+.menu-m__logo {
+    color: #fff;
+    font-size: 24px;
+    line-height: 36px;
+}
+.menu-m__company {
+    margin-left: 15px;
+}
+@media(max-width: 369px) {
+    .menu-m__company {
+        display: none;
+    }
+    .menu-m__logo {
+        width: 20%;
+    }
+    nav .dropdown {
+        width: 80%;
+    }
+}
+/*Десктоп и планшеты*/
 .menu__item {
-    display: block;
     color: #fff;
     font-size: 18px;
     text-transform: uppercase;
+    line-height: 30px;
     text-align: center;
 }
-.logo>img {
-    width: auto;
-    height: 48px;
-}
-.call>img {
-    margin-right: 10px;
-    width: 24px;
-    height: auto;
-}
-.call {
-    line-height: 25px;
-}
+/*=======================================*/
 /*=============Главный экран=============*/
+/*=======================================*/
 .main-screen {
     flex: 1 0 100%;
     position: relative;
@@ -172,9 +229,185 @@ a:visited, a:hover {
     display: flex;
     justify-content: space-around;
 }
-.container {
-    outline: 3px solid red;
+
+/*====================================*/
+/*=============О компании=============*/
+/*====================================*/
+.about {
+    padding: 70px 0;
+    background: url(../images/about/about__bg.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
 }
+.about__title {
+    margin-bottom: 50px;
+}
+.about__item {
+    padding-top: 5px;
+    padding-left: 35px;
+    font-size: 22px;
+    color: #fff;
+    background: url(../images/header/logo.png) 0 0/30px auto no-repeat;
+    
+}
+.about__item:not(:last-child) {
+    margin-bottom: 25px;
+}
+.about__image {
+    text-align: center;
+}
+.about__image>img {
+    width: 80%;
+}
+
+/*====================================*/
+/*=============Наши услуги============*/
+/*====================================*/
+.services {
+    padding: 70px 0;
+    background: url(../images/services/services__bg.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.services__title {
+    margin-bottom: 50px;
+}
+.services__row {
+    justify-content: space-between;
+}
+.services__column {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex: 0 1 300px;
+    -moz-flex: 0 1 300px;
+    -ms-flex: 0 1 300px;
+    -o-flex: 0 1 300px;
+    flex: 0 1 300px;
+    margin-bottom: 60px;
+    padding: 0 30px;
+}
+.item-service {
+/*    background: #fff linear-gradient(180deg, rgba(59,43,250,0.2) 0%, rgba(250,154,43,0.2) 100%);*/
+    background: rgba(255,255,255,0.9);
+    border-radius: 20px;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    padding: 10px;
+}
+.item-service__image {
+    margin-bottom: 18px;
+}
+.item-service__image>img {
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    width: 280px;
+    height: 200px;
+}
+.item-service__title {
+    font-size: 18px;
+    margin-bottom: 18px;
+    flex: 1 0 auto;
+}
+.item-service__conditions {
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+.item-service__worktime {
+    text-align: right;
+}
+.item-service__button {
+    -ms-align-self: center;
+    align-self: center;
+    padding: 6px 20px;
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+@media(max-width: 400px) {
+    .item-service__image>img {
+        max-width: 220px;
+    }
+}
+/*====================================*/
+/*=============Преимущества===========*/
+/*====================================*/
+.advantages {
+    padding: 70px 0 90px 0;
+    background: url(../images/advantages/advantages__bg.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+.advantages__title {
+    margin-bottom: 80px;
+}
+.advantages__row {
+    margin: 0 -9px 0 -9px;
+}
+.advantages__column {
+    padding: 0 9px 0 9px;
+    margin-bottom: 50px;
+}
+.item-advantage {
+    text-align: center;
+}
+.item-advantage__icon {
+    margin-bottom: 20px;
+}
+.item-advantage__icon>img {
+    height: 70px;
+    width: auto;
+}
+.item-advantage__label {
+    font-weight: bold;
+    color: #fff;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+.item-advantage__text {
+    color: rgba(255,255,255,0.9);
+    font-size: 18px;
+    padding: 0 10px;
+}
+
+/*====================================*/
+/*=============Контакты===============*/
+/*====================================*/
+.contacts {
+    padding: 60px 0;
+    background: url(../images/contacts/contacts__%20bg.jpg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+
+
+/*=========================================*/
+/*==============Адаптив XL=================*/
+/*=========================================*/
 @media(max-width: 1399px) {
     .main-screen__title {
         font-size: 140px;
@@ -192,6 +425,10 @@ a:visited, a:hover {
         margin-bottom: 65px;
     }
 }
+
+/*=========================================*/
+/*==============Адаптив LG=================*/
+/*=========================================*/
 @media(max-width: 1199px) {
     .main-screen__title {
         font-size: 120px;
@@ -211,8 +448,20 @@ a:visited, a:hover {
     .main-screen__button {
         font-size: 20px;
     }
+    /*  Второй экран  */
+    
+    /*==========================*/
+    /*======Наши услуги======*/
+    /*=========================*/
+    .services__row {
+        justify-content: space-around;
+    }
 }
-@media(max-width: 991px) {    /*Планшеты*/
+
+/*=========================================*/
+/*==============Адаптив md=================*/
+/*=========================================*/
+@media(max-width: 991px) {
     .main-screen__title {
         font-size: 90px;
         margin-bottom: 40px;
@@ -227,7 +476,17 @@ a:visited, a:hover {
     .main-screen__subtitle {
         margin-bottom: 50px;
     }
+    /*==========================*/
+    /*======Вторая секция======*/
+    /*=========================*/
+    .about__item {
+        font-size: 18px;
+    }
 }
+
+/*=========================================*/
+/*==============Адаптив sm=================*/
+/*=========================================*/
 @media(max-width: 767px) {
     .main-screen__title {
         font-size: 70px;
@@ -257,7 +516,57 @@ a:visited, a:hover {
     .main-screen__button.btn-blue {
         margin-bottom: 30px;
     }
+    
+    /*=========================*/
+    /*======О компании=========*/
+    /*=========================*/
+    .about__content {
+        padding-right: 30px;
+    }
+    
+    /*=========================*/
+    /*======Наши услуги========*/
+    /*=========================*/
+    .services__row {
+        justify-content: center;
+    }
+    .services__column {
+        padding: 0;
+        -webkit-flex: 0 1 60%;
+        -moz-flex: 0 1 60%;
+        -ms-flex: 0 1 60%;
+        -o-flex: 0 1 60%;
+        flex: 0 1 60%;
+    }
+    .item-service {
+        -webkit-flex: 0 1 100%;
+        -moz-flex: 0 1 100%;
+        -ms-flex: 0 1 100%;
+        -o-flex: 0 1 100%;
+        flex: 0 1 100%;
+    }
+    .item-service__image {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+    }
+    .item-service__image>img {
+        -webkit-flex: 1 1 auto;
+        -moz-flex: 1 1 auto;
+        -ms-flex: 1 1 auto;
+        -o-flex: 1 1 auto;
+        flex: 1 1 auto;
+        height: auto;
+    }
+    .item-service__conditions {
+        margin-bottom: 10px;
+    }
 }
+/*=========================================*/
+/*==============Адаптив xs=================*/
+/*=========================================*/
 @media(max-width: 575px) {
     .main-screen__title {
         font-size: 13vw;
@@ -272,5 +581,46 @@ a:visited, a:hover {
         font-size: 18px;
     }
     
+    /*=========================*/
+    /*======Вторая секция======*/
+    /*=========================*/
+    
+    /*=========================*/
+    /*======Наши услуги========*/
+    /*=========================*/
+    
+    /*=========================*/
+    /*========Почему мы========*/
+    /*=========================*/
+    .item-advantage {
+        -webkit-flex-wrap: wrap;
+        -moz-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        -o-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -ms-align-items: center;
+        align-items: center;
+        padding: 10px;
+        background-color: rgba(255,255,255,0.1);
+        border-radius: 10px;
+    }
+    .item-advantage__icon {
+        flex: 0 1 30%;
+        margin-bottom: 15px;
+    }
+    .item-advantage__icon>img {
+        height: 50px;
+        width: auto;
+    }
+    .item-advantage__label {
+        flex: 1 0 70%;
+        text-align: left;
+        margin-bottom: none;
+        font-size: 22px;
+    }
+    .item-advantage__text {
+        flex: 1 1 100%;
+        padding: 0 15px;
+    }
 }
 

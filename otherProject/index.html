@@ -13,13 +13,36 @@
     <main class="page">
         <header class="header">
             <div class="container">
-                <nav class="menu row align-items-center">
-                    <a href="#" class="menu__item logo col"><img src="images/logo.png" alt="Логотип компании"></a>
-                    <a href="#" class="menu__item col">Почему мы</a>
-                    <a href="#" class="menu__item col">Наши услуги</a>
-                    <a href="#" class="menu__item col">О нас</a>
-                    <a href="#" class="menu__item call col"><img src="images/call_icon.png" alt="">+7-(923)-456-7890</a>
-                </nav>
+               
+               <nav class="menu-mobile d-flex d-lg-none align-items-center">
+                   <div class="menu-m__logo col-8 col-sm col-md-4"><img src="images/header/logo.png" class="icon-logo" alt="Логотип компании"><span class="menu-m__company">MoversLocation</span></div>
+                   <div class="dropdown col-4 col-sm col-md-3 offset-md-5">
+                      <div class="nav__burger" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                       <div class="burger">
+                            <div class="burger-element"></div>
+                            <div class="burger-element"></div>
+                            <div class="burger-element"></div>
+                        </div>
+                    </div>
+                      <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                        <li><a class="dropdown-item" href="#">Почему мы</a></li>
+                        <li><a class="dropdown-item" href="#">Наши услуги</a></li>
+                        <li><a class="dropdown-item" href="#">О нас</a></li>
+                        <li><a class="dropdown-item" href="#">Позвонить</a></li>
+                      </ul>
+                </div>
+               </nav>
+                
+                <nav class="menu d-none d-lg-flex align-items-center">
+                    <div class="menu__logo col-1"><img src="images/header/logo.png" class="icon-logo" alt="Логотип компании"></div>
+                    <div class="menu__list offset-1 col row">
+                        <a href="#" class="menu__item col-3">Почему мы</a>
+                        <a href="#" class="menu__item col-3">Наши услуги</a>
+                        <a href="#" class="menu__item col-3">О нас</a>
+                        <a href="#" class="menu__item col-3"><img src="images/header/call_icon.png" class="icon-call" alt="">+7 123 456 7890</a>
+                    </div>
+               </nav>
+                
             </div>
         </header>
         <section class="main-screen">
@@ -37,10 +60,147 @@
                 </div>
             </div>
         </section>
-        <div class="content">fse</div>
+        <div class="content">
+            <section class="about section">
+                <div class="container">
+                    <h2 class="about__title title">Немного о нашей компании</h2>
+                    <div class="about__body row align-items-center">
+                        <div class="about__content col-12 col-md-7 offset-md-0">
+                            <ul class="about__list text">
+                                <li class="about__item">Компания «MoversLocation» предоставляет услуги грузчиков, разнорабочих, комплектовщиков, фасовщиков, такелажников и иной линейный персонал.</li>
+                                <li class="about__item">Мы обслуживаем склады, производства, торговые сети, мероприятия и любые другие проекты, где требуется профессиональный подход к управлению линейным персоналом.</li>
+                                <li class="about__item">Каждый день к нам обращаются десятки клиентов за помощью в привлечении рабочей силы для своих проектов.</li>
+                            </ul>
+                        </div>
+                        <div class="about__image d-none d-md-block col-md-5"><img src="images/about/human1.png" alt=""></div>
+                    </div>
+                </div>
+            </section>
+            <section class="services section">
+                <div class="container">
+                    <h2 class="services__title title">Наши услуги</h2>
+                    <div class="services__row row">
+                       
+                        <div class="services__column">
+                            <div class="item-service">
+                                <div class="item-service__image"><img src="images/services/service-image.png" alt=""></div>
+                                <h3 class="item-service__title">Квартирные и офисные переезды</h3>
+                                <div class="item-service__conditions text row">
+                                    <p class="item-service__cost col">350 ₽/час</p>
+                                    <p class="item-service__worktime col">От 2 часов</p>
+                                </div>
+                                <a href="#" class="item-service__button button btn-orange">Заказать</a>
+                            </div>
+                        </div>
+                        
+                        <div class="services__column">
+                            <div class="item-service">
+                                <div class="item-service__image"><img src="images/services/service-image.png" alt=""></div>
+                                <h3 class="item-service__title">Квартирные и офисные переезды</h3>
+                                <div class="item-service__conditions text row">
+                                    <p class="item-service__cost col">350 ₽/час</p>
+                                    <p class="item-service__worktime col">От 2 часов</p>
+                                </div>
+                                <a href="#" class="item-service__button button btn-orange">Заказать</a>
+                            </div>
+                        </div>
+                        
+                        <div class="services__column">
+                            <div class="item-service">
+                                <div class="item-service__image"><img src="images/services/service-image.png" alt=""></div>
+                                <h3 class="item-service__title">Квартирные и офисные переезды</h3>
+                                <div class="item-service__conditions text row">
+                                    <p class="item-service__cost col">350 ₽/час</p>
+                                    <p class="item-service__worktime col">От 2 часов</p>
+                                </div>
+                                <a href="#" class="item-service__button button btn-orange">Заказать</a>
+                            </div>
+                        </div>
+                        
+                        <div class="services__column">
+                            <div class="item-service">
+                                <div class="item-service__image"><img src="images/services/service-image.png" alt=""></div>
+                                <h3 class="item-service__title">Квартирные и офисные переезды</h3>
+                                <div class="item-service__conditions text row">
+                                    <p class="item-service__cost col">350 ₽/час</p>
+                                    <p class="item-service__worktime col">От 2 часов</p>
+                                </div>
+                                <a href="#" class="item-service__button button btn-orange">Заказать</a>
+                            </div>
+                        </div>
+                        
+                        <div class="services__column">
+                            <div class="item-service">
+                                <div class="item-service__image"><img src="images/services/service-image.png" alt=""></div>
+                                <h3 class="item-service__title">Квартирные и офисные переезды</h3>
+                                <div class="item-service__conditions text row">
+                                    <p class="item-service__cost col">350 ₽/час</p>
+                                    <p class="item-service__worktime col">От 2 часов</p>
+                                </div>
+                                <a href="#" class="item-service__button button btn-orange">Заказать</a>
+                            </div>
+                        </div>
+                        
+                        <div class="services__column">
+                            <div class="item-service">
+                                <div class="item-service__image"><img src="images/services/service-image.png" alt=""></div>
+                                <h3 class="item-service__title">Квартирные и офисные переезды</h3>
+                                <div class="item-service__conditions text row">
+                                    <p class="item-service__cost col">350 ₽/час</p>
+                                    <p class="item-service__worktime col">От 2 часов</p>
+                                </div>
+                                <a href="#" class="item-service__button button btn-orange">Заказать</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </section>
+            <section class="advantages section">
+                <div class="container">
+                    <h2 class="advantages__title title">Почему именно мы?</h2>
+                    <div class="advantages__row row">
+                        <div class="advantages__column col-12 col-sm-6 col-lg-3">
+                            <div class="item-advantage d-flex d-sm-block">
+                                <div class="item-advantage__icon"><img src="images/advantages/icon1.png" alt=""></div>
+                                <h3 class="item-advantage__label">Оперативность</h3>
+                                <p class="item-advantage__text text">Приедем к вам в течение часа без опозданий.</p>
+                            </div>
+                        </div>
+                        <div class="advantages__column col-12 col-sm-6 col-lg-3">
+                            <div class="item-advantage d-flex d-sm-block">
+                                <div class="item-advantage__icon"><img src="images/advantages/icon2.png" alt=""></div>
+                                <h3 class="item-advantage__label">Надежность</h3>
+                                <p class="item-advantage__text text">Только проверенные рабочие. Мы уверены в сотрудниках.</p>
+                            </div>
+                        </div>
+                        <div class="advantages__column col-12 col-sm-6 col-lg-3">
+                            <div class="item-advantage d-flex d-sm-block">
+                                <div class="item-advantage__icon"><img src="images/advantages/icon3.png" alt=""></div>
+                                <h3 class="item-advantage__label">Удобство</h3>
+                                <p class="item-advantage__text text">Что-то ещё, что можно уместить так же в две строчки.</p>
+                            </div>
+                        </div>
+                        <div class="advantages__column col-12 col-sm-6 col-lg-3">
+                            <div class="item-advantage d-flex d-sm-block">
+                                <div class="item-advantage__icon"><img src="images/advantages/icon4.png" alt=""></div>
+                                <h3 class="item-advantage__label">Выгода для вас</h3>
+                                <p class="item-advantage__text text">Работаем с физическими и юридическими лицами.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="contacts section">
+                <div class="container">
+                     <h2 class="contacts__title title">Свяжитесь с нами</h2>
+                </div>
+            </section>
+        </div>
         <footer class="footer"></footer>
     </main>
 </div>
 <script src="js/ibg.js"></script>
+<script src="js/bootstrap.bundle.js"></script>
 </body>
 </html>
