@@ -10,7 +10,7 @@ html, body {
 h1 {
    font-family: 'Colonna MT', Arial, sans-serif; 
 }
-.menu__item, .button {
+.menu__item, .button, .footer {
     font-family: 'Fira Sans', sans-serif;
 }
 .text {
@@ -41,7 +41,7 @@ h1 {
     box-shadow: 1px 1px 10px #fff;
 }
 a:visited {
-    color: #fff!important;
+    color: #fff;
 }
 .title {
     font-size: 56px;
@@ -459,6 +459,10 @@ nav .dropdown {
 .contacts__image>img {
     max-width: 90%;
 }
+
+/*====================================*/
+/*===============Футер================*/
+/*====================================*/
 .footer {
     background: rgba(0,0,0,0.7);
     position: relative;
@@ -474,6 +478,9 @@ nav .dropdown {
 .footer__column {
     font-size: 20px;
     margin-bottom: 46px;
+}
+.footer__column a {
+    color: #fff;
 }
 .footer__contacts-title, .footer__info-title {
     text-align: center;
