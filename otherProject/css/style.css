@@ -26,7 +26,9 @@ h1 {
     color: #fff;
     border-radius: 40px;
 }
-.btn-blue {background-color: #3B2BFA;}
+.btn-blue {
+    background-color: #3B2BFA;
+}
 .btn-blue:hover {
     background-color: #2517CD;
     box-shadow: 1px 1px 10px #fff;
@@ -102,7 +104,7 @@ a:visited, a:hover {
 /*=============Шапка=============*/
 /*==============================*/
 .header {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0,0,0,0.7);
     position: fixed;
     width: 100%;
     z-index: 10;
@@ -294,8 +296,11 @@ nav .dropdown {
     padding: 0 30px;
 }
 .item-service {
-/*    background: #fff linear-gradient(180deg, rgba(59,43,250,0.2) 0%, rgba(250,154,43,0.2) 100%);*/
-    background: rgba(255,255,255,0.9);
+    background: linear-gradient(180deg, rgba(59,43,250,0.3) 0%, rgba(250,154,43,0.3) 100%);
+    background: -webkit-linear-gradient: linear-gradient(180deg, rgba(59,43,250,0.3) 0%, rgba(250,154,43,0.3) 100%);
+    background: -o-linear-gradient: linear-gradient(180deg, rgba(59,43,250,0.3) 0%, rgba(250,154,43,0.3) 100%);
+    background: linear-gradient: linear-gradient(180deg, rgba(59,43,250,0.3) 0%, rgba(250,154,43,0.3) 100%);
+/*    background: rgba(255,255,255,0.9);*/
     border-radius: 20px;
     display: -webkit-flex;
     display: -moz-flex;
@@ -308,6 +313,7 @@ nav .dropdown {
     -o-flex-direction: column;
     flex-direction: column;
     padding: 10px;
+    color: #fff;
 }
 .item-service__image {
     margin-bottom: 18px;
@@ -325,12 +331,16 @@ nav .dropdown {
 }
 .item-service__conditions {
     justify-content: space-between;
-    font-size: 18px;
     font-weight: bold;
     margin-bottom: 30px;
 }
+.item-service__cost {
+    font-size: 26px;
+}
 .item-service__worktime {
     text-align: right;
+    font-size: 18px;
+    line-height: 26px;
 }
 .item-service__button {
     -ms-align-self: center;
@@ -342,6 +352,9 @@ nav .dropdown {
 @media(max-width: 400px) {
     .item-service__image>img {
         max-width: 220px;
+    }
+    .item-service__cost {
+        font-size: 20px;
     }
 }
 /*====================================*/
@@ -392,14 +405,91 @@ nav .dropdown {
 /*=============Контакты===============*/
 /*====================================*/
 .contacts {
-    padding: 60px 0;
+    padding: 60px 0 80px 0;
     background: url(../images/contacts/contacts__%20bg.jpg);
     background-repeat: no-repeat;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
 }
-
+.contacts__body {
+    margin-bottom: 270px;
+}
+.contacts__title {
+    margin-bottom: 50px;
+}
+.contacts__call, .contacts__messenger {
+    justify-content: flex-start;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+}
+.contacts__button-top, .contacts__button-bottom {
+    margin-bottom: 60px;
+    -ms-align-self: center;
+    align-self: center;
+}
+.contacts__block {
+    flex: 1 0 auto;
+    max-height: 130px;
+    border-radius: 10px;
+    margin: 0;
+    margin-bottom: 80px;
+    padding: 0 10.500px;
+    background: rgba(255,255,255,0.2);
+    background: -webkit-linear-gradient: linear-gradient(180deg, rgba(59,43,250,0.3) 0%, rgba(250,154,43,0.3) 100%);
+    background: -o-linear-gradient: linear-gradient(180deg, rgba(59,43,250,0.3) 0%, rgba(250,154,43,0.3) 100%);
+    background: linear-gradient: linear-gradient(180deg, rgba(59,43,250,0.3) 0%, rgba(250,154,43,0.3) 100%);
+}
+.contacts__text {
+    color: #fff;
+    font-size: 24px;
+    padding: 20px;
+    text-align: center;
+}
+.contacts__image {
+    text-align: center;
+}
+.contacts__image>img {
+    max-width: 90%;
+}
+.footer {
+    background: rgba(0,0,0,0.7);
+    position: relative;
+    left: 0;
+    bottom: 265px;
+}
+.footer__body {
+    padding: 30px 0;
+}
+.footer__row {
+    color: #fff;
+}
+.footer__column {
+    font-size: 20px;
+    margin-bottom: 46px;
+}
+.footer__contacts-title, .footer__info-title {
+    text-align: center;
+    font-size: 24px;
+    color: #fff;
+    margin-bottom: 45px;
+}
+.footer__logo {
+    text-align: center;
+}
+.footer__logo>div>img {
+    width: 100%;
+    max-width: 80px;
+    height: auto;
+}
 
 
 
@@ -450,8 +540,8 @@ nav .dropdown {
     }
     /*  Второй экран  */
     
-    /*==========================*/
-    /*======Наши услуги======*/
+    /*=========================*/
+    /*======Наши услуги========*/
     /*=========================*/
     .services__row {
         justify-content: space-around;
@@ -481,6 +571,34 @@ nav .dropdown {
     /*=========================*/
     .about__item {
         font-size: 18px;
+    }
+    
+    /*=========================*/
+    /*========Контакты=========*/
+    /*=========================*/
+    .contacts__block {
+        max-height: 100%;
+    }
+    .contacts__body {
+        margin-bottom: 253px;
+    }
+    
+    
+    /*=========================*/
+    /*==========Футер==========*/
+    /*=========================*/
+    .footer {
+        background: rgba(0,0,0,0.7);
+        position: relative;
+        left: 0;
+        bottom: 253px;
+    }
+    .footer__contacts-title, .footer__info-title {
+        text-align: left;
+    }
+    .footer__column {
+        margin-bottom: 0;
+        line-height: 30px;
     }
 }
 
@@ -563,6 +681,38 @@ nav .dropdown {
     .item-service__conditions {
         margin-bottom: 10px;
     }
+    
+    /*=========================*/
+    /*========Контакты=========*/
+    /*=========================*/
+    .contacts__call {
+        margin-bottom: 60px;
+    }
+    .contacts__button-top, .contacts__button-bottom {
+        -ms-align-self: stretch;
+        align-self: stretch;
+        margin-bottom: 20px;
+    }
+    .contacts__block {
+        margin-bottom: 40px;
+    }
+    .contacts__body {
+        margin-bottom: 226px;
+    }
+    
+    /*=========================*/
+    /*==========Футер==========*/
+    /*=========================*/
+    .footer {
+        bottom: 226px;
+    }
+    .footer__contacts-title, .footer__info-title {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+    .footer__column {
+        font-size: 18px;
+    }
 }
 /*=========================================*/
 /*==============Адаптив xs=================*/
@@ -615,12 +765,89 @@ nav .dropdown {
     .item-advantage__label {
         flex: 1 0 70%;
         text-align: left;
-        margin-bottom: none;
+        margin-bottom: 0;
         font-size: 22px;
     }
     .item-advantage__text {
         flex: 1 1 100%;
         padding: 0 15px;
     }
+    
+    /*=========================*/
+    /*========Контакты=========*/
+    /*=========================*/
+    .contacts__text {
+        font-size: 22px;
+    }
+    [class^="contacts__button"] {
+        font-size: 18px;
+    }
+    .contacts__body {
+        margin-bottom: 282px;
+    }
+    
+    /*=========================*/
+    /*==========Футер==========*/
+    /*=========================*/
+    .footer {
+        bottom: 282px;
+    }
+    .footer__column {
+        font-size: 18px;
+    }
+    .footer__column-mobile {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    .footer__column-mobile.order-2, .footer__column-mobile.order-3 {
+        margin-bottom: 0;
+        align-self: flex-end;
+    }
+    .footer__info, .footer__contacts {
+        margin-bottom: 30px;
+    }
+    .footer__contacts .footer__row {
+        height: 100%;
+    }
+    .footer__column-mobile>img {
+        width: 46px;
+        height: auto;
+    }
+    .footer-m__company {
+        font-size: 24px;
+        margin-left: 15px;
+        color: #fff;
+    }
+    .footer__logo-row {
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
+@media(max-width: 309px) {
+    .contacts__body {
+        margin-bottom: 256px;
+    }
+    .footer {
+        bottom: 256px;
+    }
+    .footer__info {
+        width: 50%;
+        margin-left: 8.33333333%;
+    }
+    .footer__logo>div>img {
+        max-width: 50px;
+        height: auto;
+    }
+}
+
+
+
+
+
+
 

@@ -17,7 +17,7 @@
                <nav class="menu-mobile d-flex d-lg-none align-items-center">
                    <div class="menu-m__logo col-8 col-sm col-md-4"><img src="images/header/logo.png" class="icon-logo" alt="Логотип компании"><span class="menu-m__company">MoversLocation</span></div>
                    <div class="dropdown col-4 col-sm col-md-3 offset-md-5">
-                      <div class="nav__burger" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                      <div class="nav__burger" role="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                        <div class="burger">
                             <div class="burger-element"></div>
                             <div class="burger-element"></div>
@@ -194,10 +194,57 @@
             <section class="contacts section">
                 <div class="container">
                      <h2 class="contacts__title title">Свяжитесь с нами</h2>
+                     <div class="contacts__body row">
+                         <div class="contacts__call col-md-5 col-lg-4">
+                             <div class="contacts__block row justify-content-center">
+                                 <div class="contacts__text text align-self-center">По всем вопросам:<br> +7-(123)-456-78-90, <b>Алексей</b></div>
+                             </div>
+                             <a href="#" class="contacts__button-top button btn-blue">Позвонить</a>
+                             <a href="#" class="contacts__button-bottom button btn-orange">Группа ВК</a>
+                         </div>
+                         <div class="contacts__image d-none d-lg-block col-lg-4">
+                             <img src="images/contacts/contacts__image.png" alt="">
+                        </div>
+                        <div class="contacts__messenger offset-md-2 col-md-5 offset-lg-0 col-lg-4">
+                             <div class="contacts__block row justify-content-center">
+                                 <div class="contacts__text text align-self-center">Либо вы можете связаться с нами через мессенджеры:</div>
+                             </div>
+                             <a href="#" class="contacts__button-top button btn-blue">Telegram</a>
+                             <a href="#" class="contacts__button-bottom button btn-orange">WhatsApp</a>
+                         </div>
+                     </div>
                 </div>
             </section>
         </div>
-        <footer class="footer"></footer>
+        <footer class="footer">
+           <div class="container">
+               <div class="footer__body row">
+                   <div class="footer__contacts order-0 col-5 col-sm-4">
+                       <h3 class="footer__contacts-title d-none d-sm-block"><nobr>Свяжитесь с нами:</nobr></h3>
+                       <div class="footer__row row flex-sm-column justify-content-between flex-lg-row">
+                           <div class="footer__column d-none d-sm-block col-lg-6"><a href="#">WhatsApp</a></div>
+                           <div class="footer__column d-none d-sm-block col-lg-6"><a href="#"><nobr>Группа Вконтакте</nobr></a></div>
+                           <div class="footer__column d-none d-sm-block col-lg-6"><a href="#">Telegram</a></div>
+                           <div class="footer__column d-none d-sm-block col-lg-6"><a href="#">Позвонить</a></div>
+                           <a title="Группа ВК" class="footer__column-mobile order-0 d-block col-6 d-sm-none align-self-start"><img src="images/footer/vk.png" alt=""></a>
+                           <a title="Мы в WhatsApp" class="footer__column-mobile order-1 d-block col-6 d-sm-none align-self-start"><img src="images/footer/whatsapp.png" alt=""></a>
+                           <a title="Мы в Telegram" class="footer__column-mobile order-2 d-block col-6 d-sm-none align-self-end"><img src="images/footer/telegram.png" alt=""></a>
+                           <a title="Позвонить" class="footer__column-mobile order-3 d-block col-6 d-sm-none align-self-end"><img src="images/footer/telephone.png" alt=""></a>
+                       </div>
+                   </div>
+                   <div class="footer__logo order-2 order-sm-1 offset-sm-1 col-sm-2 row justify-content-center align-items-center"><div class="footer__logo-row"><img src="images/header/logo.png" class="" alt="Логотип"><span class="footer-m__company d-block d-sm-none">MoversLocation</span></div></div>
+                   <div class="footer__info order-1 order-sm-2 offset-2 col-5 col-sm-4 offset-sm-1 col-sm-3 offset-lg-1 col-lg-4">
+                       <h3 class="footer__info-title d-none d-sm-block">Информация:</h3>
+                       <div class="footer__row row flex-column flex-lg-row">
+                           <div class="footer__column col-lg-6"><a href="#">Почему мы</a></div>
+                           <div class="footer__column col-lg-6"><a href="#">Наши услуги</a></div>
+                           <div class="footer__column col-lg-6"><a href="#">О нас</a></div>
+                           <div class="footer__column col-lg-6"><a href="#">Связаться</a></div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </footer>
     </main>
 </div>
 <script src="js/ibg.js"></script>
