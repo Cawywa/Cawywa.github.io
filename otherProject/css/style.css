@@ -40,9 +40,8 @@ h1 {
     background-color: #D68527;
     box-shadow: 1px 1px 10px #fff;
 }
-
-a:visited, a:hover {
-    color: #fff;
+a:visited {
+    color: #fff!important;
 }
 .title {
     font-size: 56px;
